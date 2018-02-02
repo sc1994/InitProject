@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using Entity;
 
-namespace Console.Program
+namespace UserConsole
 {
 	public class RefSet
 	{
