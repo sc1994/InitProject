@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppEnum.cs" />
     <Compile Include="Config.Packages.cs" />
     <Compile Include="Csproj.Project.cs" />
     <Compile Include="Config.Configuration.cs" />

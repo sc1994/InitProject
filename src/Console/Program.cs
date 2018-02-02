@@ -1,4 +1,5 @@
 ﻿using System;
+using Entity;
 using Utilities;
 
 namespace UserConsole
@@ -7,10 +8,7 @@ namespace UserConsole
 	{
 		static void Main(string[] args)
 		{
-			"12123123".WriteMajor(true);
-
-
-			Console.ReadLine();
+			RefSet.SetPackage(Init.Config.Business, PackageEnum.Autofac);
 		}
 	}
 }

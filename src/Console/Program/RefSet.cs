@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using Entity;
+using Utilities;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.IO;
 
 namespace UserConsole
 {
@@ -30,37 +33,25 @@ namespace UserConsole
 			_projectReferences.Add(config.Utilities);
 		}
 
-		public void SetPackage(ProjectEnum project, PackageEnum package)
+		/// <summary>
+		/// 给某个项目配置某种包
+		/// </summary>
+		/// <param name="project">某个项目</param>
+		/// <param name="package">某个包</param>
+		public static void SetPackage(string project, PackageEnum package)
 		{
+			Parallel.Invoke(
+				() =>
+				{
+					$"正在配置\"{package.ToDescription()}\"--到--\"{project}\"".WriteWait(new Random().Next(1, 4));
+				},
+				() =>
+				{
+					var projectPath = Path.Combine(Init.Config.SolutionPath, project);
 
+				});
 		}
 	}
 
-	public enum PackageEnum
-	{
-		[Description("StackExchange.Redis")]
-		StackExchangeRedis,
-		[Description("Dapper")]
-		Dapper,
-		[Description("log4net")]
-		LogNet,
-		[Description("TinyMapper")]
-		TinyMapper,
-		[Description("Autofac")]
-		Autofac,
-		[Description("Autofac.Mvc5")]
-		AutofacMvc5
-	}
 
-	public enum ProjectEnum
-	{
-		Business,
-		Cache,
-		Common,
-		Dal,
-		Entity,
-		Factory,
-		Model,
-		Utilities
-	}
 }
