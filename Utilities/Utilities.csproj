@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectHelper.cs" />
+    <Compile Include="ConsoleHelper.cs" />
     <Compile Include="ConvertHelper.cs" />
     <Compile Include="DateTimeHelper.cs" />
     <Compile Include="ExpressionHelper.cs" />

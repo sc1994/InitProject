@@ -6,7 +6,7 @@ namespace UserConsole
 	{
 		static void Main(string[] args)
 		{
-
+			
 			Console.ReadLine();
 		}
 	}

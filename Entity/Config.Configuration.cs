@@ -38,7 +38,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlArrayItemAttribute("add", IsNullable = false)]
+		[System.Xml.Serialization.XmlArrayItem("add", IsNullable = false)]
 		public configurationAdd[] connectionStrings
 		{
 			get
@@ -52,7 +52,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlArrayItemAttribute("add", IsNullable = false)]
+		[System.Xml.Serialization.XmlArrayItem("add", IsNullable = false)]
 		public configurationAdd1[] appSettings
 		{
 			get
@@ -66,7 +66,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlElementAttribute("system.web")]
+		[System.Xml.Serialization.XmlElement("system.web")]
 		public configurationSystemweb systemweb
 		{
 			get
@@ -93,7 +93,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlElementAttribute("system.webServer")]
+		[System.Xml.Serialization.XmlElement("system.webServer")]
 		public configurationSystemwebServer systemwebServer
 		{
 			get
@@ -107,7 +107,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlElementAttribute("system.codedom")]
+		[System.Xml.Serialization.XmlElement("system.codedom")]
 		public configurationSystemcodedom systemcodedom
 		{
 			get
@@ -122,10 +122,10 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-	public partial class configurationConfigSections
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true)]
+	public class configurationConfigSections
 	{
 
 		private configurationConfigSectionsSection sectionField;
@@ -145,10 +145,10 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-	public partial class configurationConfigSectionsSection
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true)]
+	public class configurationConfigSectionsSection
 	{
 
 		private string nameField;
@@ -156,7 +156,7 @@
 		private string typeField;
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string name
 		{
 			get
@@ -170,7 +170,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string type
 		{
 			get
@@ -185,10 +185,10 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-	public partial class configurationAdd
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true)]
+	public class configurationAdd
 	{
 
 		private string nameField;
@@ -196,7 +196,7 @@
 		private string connectionStringField;
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string name
 		{
 			get
@@ -210,7 +210,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string connectionString
 		{
 			get
@@ -225,10 +225,10 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-	public partial class configurationAdd1
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true)]
+	public class configurationAdd1
 	{
 
 		private string keyField;
@@ -236,7 +236,7 @@
 		private string valueField;
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string key
 		{
 			get
@@ -250,7 +250,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string value
 		{
 			get
@@ -265,10 +265,10 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-	public partial class configurationSystemweb
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true)]
+	public class configurationSystemweb
 	{
 
 		private configurationSystemwebCompilation compilationField;
@@ -318,10 +318,10 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-	public partial class configurationSystemwebCompilation
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true)]
+	public class configurationSystemwebCompilation
 	{
 
 		private bool debugField;
@@ -329,7 +329,7 @@
 		private string targetFrameworkField;
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public bool debug
 		{
 			get
@@ -343,7 +343,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string targetFramework
 		{
 			get
@@ -358,16 +358,16 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-	public partial class configurationSystemwebHttpRuntime
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true)]
+	public class configurationSystemwebHttpRuntime
 	{
 
 		private string targetFrameworkField;
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string targetFramework
 		{
 			get
@@ -382,10 +382,10 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-	public partial class configurationSystemwebHttpModules
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true)]
+	public class configurationSystemwebHttpModules
 	{
 
 		private configurationSystemwebHttpModulesAdd addField;
@@ -405,10 +405,10 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-	public partial class configurationSystemwebHttpModulesAdd
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true)]
+	public class configurationSystemwebHttpModulesAdd
 	{
 
 		private string nameField;
@@ -416,7 +416,7 @@
 		private string typeField;
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string name
 		{
 			get
@@ -430,7 +430,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string type
 		{
 			get
@@ -445,17 +445,17 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-	public partial class configurationRuntime
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true)]
+	public class configurationRuntime
 	{
 
 		private assemblyBindingDependentAssembly[] assemblyBindingField;
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlArrayAttribute(Namespace = "urn:schemas-microsoft-com:asm.v1")]
-		[System.Xml.Serialization.XmlArrayItemAttribute("dependentAssembly", IsNullable = false)]
+		[System.Xml.Serialization.XmlArray(Namespace = "urn:schemas-microsoft-com:asm.v1")]
+		[System.Xml.Serialization.XmlArrayItem("dependentAssembly", IsNullable = false)]
 		public assemblyBindingDependentAssembly[] assemblyBinding
 		{
 			get
@@ -470,10 +470,10 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:schemas-microsoft-com:asm.v1")]
-	public partial class assemblyBindingDependentAssembly
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "urn:schemas-microsoft-com:asm.v1")]
+	public class assemblyBindingDependentAssembly
 	{
 
 		private assemblyBindingDependentAssemblyAssemblyIdentity assemblyIdentityField;
@@ -508,10 +508,10 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:schemas-microsoft-com:asm.v1")]
-	public partial class assemblyBindingDependentAssemblyAssemblyIdentity
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "urn:schemas-microsoft-com:asm.v1")]
+	public class assemblyBindingDependentAssemblyAssemblyIdentity
 	{
 
 		private string nameField;
@@ -521,7 +521,7 @@
 		private string publicKeyTokenField;
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string name
 		{
 			get
@@ -535,7 +535,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string culture
 		{
 			get
@@ -549,7 +549,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string publicKeyToken
 		{
 			get
@@ -564,10 +564,10 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:schemas-microsoft-com:asm.v1")]
-	public partial class assemblyBindingDependentAssemblyBindingRedirect
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "urn:schemas-microsoft-com:asm.v1")]
+	public class assemblyBindingDependentAssemblyBindingRedirect
 	{
 
 		private string oldVersionField;
@@ -575,7 +575,7 @@
 		private string newVersionField;
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string oldVersion
 		{
 			get
@@ -589,7 +589,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string newVersion
 		{
 			get
@@ -604,10 +604,10 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-	public partial class configurationSystemwebServer
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true)]
+	public class configurationSystemwebServer
 	{
 
 		private configurationSystemwebServerValidation validationField;
@@ -642,16 +642,16 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-	public partial class configurationSystemwebServerValidation
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true)]
+	public class configurationSystemwebServerValidation
 	{
 
 		private bool validateIntegratedModeConfigurationField;
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public bool validateIntegratedModeConfiguration
 		{
 			get
@@ -666,17 +666,17 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-	public partial class configurationSystemwebServerModules
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true)]
+	public class configurationSystemwebServerModules
 	{
 
 		private object[] itemsField;
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlElementAttribute("add", typeof(configurationSystemwebServerModulesAdd))]
-		[System.Xml.Serialization.XmlElementAttribute("remove", typeof(configurationSystemwebServerModulesRemove))]
+		[System.Xml.Serialization.XmlElement("add", typeof(configurationSystemwebServerModulesAdd))]
+		[System.Xml.Serialization.XmlElement("remove", typeof(configurationSystemwebServerModulesRemove))]
 		public object[] Items
 		{
 			get
@@ -691,10 +691,10 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-	public partial class configurationSystemwebServerModulesAdd
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true)]
+	public class configurationSystemwebServerModulesAdd
 	{
 
 		private string nameField;
@@ -704,7 +704,7 @@
 		private string preConditionField;
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string name
 		{
 			get
@@ -718,7 +718,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string type
 		{
 			get
@@ -732,7 +732,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string preCondition
 		{
 			get
@@ -747,16 +747,16 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-	public partial class configurationSystemwebServerModulesRemove
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true)]
+	public class configurationSystemwebServerModulesRemove
 	{
 
 		private string nameField;
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string name
 		{
 			get
@@ -771,16 +771,16 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-	public partial class configurationSystemcodedom
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true)]
+	public class configurationSystemcodedom
 	{
 
 		private configurationSystemcodedomCompiler[] compilersField;
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlArrayItemAttribute("compiler", IsNullable = false)]
+		[System.Xml.Serialization.XmlArrayItem("compiler", IsNullable = false)]
 		public configurationSystemcodedomCompiler[] compilers
 		{
 			get
@@ -795,10 +795,10 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-	public partial class configurationSystemcodedomCompiler
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true)]
+	public class configurationSystemcodedomCompiler
 	{
 
 		private string languageField;
@@ -812,7 +812,7 @@
 		private string compilerOptionsField;
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string language
 		{
 			get
@@ -826,7 +826,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string extension
 		{
 			get
@@ -840,7 +840,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string type
 		{
 			get
@@ -854,7 +854,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public byte warningLevel
 		{
 			get
@@ -868,7 +868,7 @@
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+		[System.Xml.Serialization.XmlAttribute]
 		public string compilerOptions
 		{
 			get
@@ -883,17 +883,17 @@
 	}
 
 	/// <remarks/>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:schemas-microsoft-com:asm.v1")]
-	[System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:schemas-microsoft-com:asm.v1", IsNullable = false)]
-	public partial class assemblyBinding
+	[System.Serializable]
+	[System.ComponentModel.DesignerCategory("code")]
+	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "urn:schemas-microsoft-com:asm.v1")]
+	[System.Xml.Serialization.XmlRoot(Namespace = "urn:schemas-microsoft-com:asm.v1", IsNullable = false)]
+	public class assemblyBinding
 	{
 
 		private assemblyBindingDependentAssembly[] dependentAssemblyField;
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlElementAttribute("dependentAssembly")]
+		[System.Xml.Serialization.XmlElement("dependentAssembly")]
 		public assemblyBindingDependentAssembly[] dependentAssembly
 		{
 			get
