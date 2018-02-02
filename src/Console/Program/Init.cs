@@ -33,7 +33,6 @@ namespace UserConsole
 			{
 				"请确保InifConfig.json 中的配置齐全".WriteError();
 				"系统即将关闭".WriteWait(5);
-				Environment.Exit(0);
 			}
 
 			return result;

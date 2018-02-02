@@ -3,6 +3,7 @@ using System.IO;
 using System.Xml;
 using System.Linq;
 using System.Data;
+using System.Xml.Linq;
 using Newtonsoft.Json;
 using System.Reflection;
 using System.ComponentModel;
@@ -246,9 +247,9 @@ namespace Utilities
             {
                 using (var writer = XmlWriter.Create(sww))
                 {
-                    xsSubmit.Serialize(writer, obj);
-                    return sww.ToString();
-                }
+					xsSubmit.Serialize(writer, obj);
+                    return XElement.Parse(sww.ToString()).ToString();
+				}
             }
         }
 

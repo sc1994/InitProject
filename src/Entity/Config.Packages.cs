@@ -1,4 +1,6 @@
-﻿namespace Entity
+﻿using System.Collections.Generic;
+
+namespace Entity
 {
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
@@ -7,11 +9,11 @@
 	public class packages
 	{
 
-		private packagesPackage[] packageField;
+		private List<packagesPackage> packageField = new List<packagesPackage>();
 
 		/// <remarks/>
 		[System.Xml.Serialization.XmlElement("package")]
-		public packagesPackage[] package
+		public List<packagesPackage> package
 		{
 			get
 			{
@@ -35,7 +37,7 @@
 
 		private string versionField;
 
-		private string targetFrameworkField;
+		private string targetFrameworkField = "net461"; // todo 目前是默认, 发现问题的在做兼容
 
 		private bool developmentDependencyField;
 

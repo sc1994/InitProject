@@ -8,7 +8,11 @@ namespace UserConsole
 	{
 		static void Main(string[] args)
 		{
-			RefSet.SetPackage(Init.Config.Business, PackageEnum.Autofac);
+			RefSet.SetPackage(Init.Config.Web, PackageEnum.Autofac);
+
+
+
+			Console.ReadLine();
 		}
 	}
 }

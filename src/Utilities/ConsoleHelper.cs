@@ -5,6 +5,11 @@ namespace Utilities
 {
 	public static class ConsoleHelper
 	{
+		public static void WritrSuccess(this string that)
+		{
+
+		}
+
 		/// <summary>
 		/// 普通输出
 		/// </summary>
@@ -43,7 +48,6 @@ namespace Utilities
 				{
 					Console.WriteLine();
 					"你否定了这些信息, 窗口即将关闭".WriteWait(5);
-					Environment.Exit(0);
 				}
 			}
 		}
@@ -82,13 +86,18 @@ namespace Utilities
 		/// </summary>
 		/// <param name="msg"></param>
 		/// <param name="second"></param>
-		public static void WriteWait(this string msg, int second)
+		/// <param name="close">是否关闭窗口</param>
+		public static void WriteWait(this string msg, int second, bool close = true)
 		{
 			Console.Write(msg + " ");
 			for (var i = 0; i < second; i++)
 			{
 				Console.Write(". ");
 				Thread.Sleep(1000);
+			}
+			if (close)
+			{
+				Environment.Exit(0);
 			}
 			Console.WriteLine();
 		}

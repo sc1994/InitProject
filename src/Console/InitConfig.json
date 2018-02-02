@@ -1,5 +1,5 @@
 ﻿{
-  "SolutionPath": "D:\\Self\\InitProject\\demo", // 解决方法存放磁盘的绝对路径
+  "SolutionPath": "D:\\Work\\InitProject\\demo", // 解决方法存放磁盘的绝对路径
   "DbConnectionStrings": "Database=MDCalendar;Server=172.17.30.145\\mingdao3;User ID=sa;Password=mingdao3;Pooling=true;Max Pool Size=32767;Min Pool Size=0;", // 数据库的链接字符串
   "Dbs": "MDCalendar", // 需要生成的库(多个库之间用逗号隔开)
   "Business": "Web.Business",

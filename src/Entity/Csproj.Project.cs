@@ -1,4 +1,6 @@
-﻿namespace Entity
+﻿using System.Collections.Generic;
+
+namespace Entity
 {
 
 	// 注意: 生成的代码可能至少需要 .NET Framework 4.5 或 .NET Core/Standard 2.0。
@@ -10,7 +12,7 @@
 	public class Project
 	{
 
-		private object[] itemsField;
+		private List<object> itemsField;
 
 		private decimal toolsVersionField;
 
@@ -22,7 +24,7 @@
 		[System.Xml.Serialization.XmlElement("ProjectExtensions", typeof(ProjectProjectExtensions))]
 		[System.Xml.Serialization.XmlElement("PropertyGroup", typeof(ProjectPropertyGroup))]
 		[System.Xml.Serialization.XmlElement("Target", typeof(ProjectTarget))]
-		public object[] Items
+		public List<object> Items
 		{
 			get
 			{
@@ -67,7 +69,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectImport
+	public class ProjectImport
 	{
 
 		private string projectField;
@@ -107,10 +109,10 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectItemGroup
+	public class ProjectItemGroup
 	{
 
-		private object[] itemsField;
+		private List<object> itemsField;
 
 		/// <remarks/>
 		[System.Xml.Serialization.XmlElement("Compile", typeof(ProjectItemGroupCompile))]
@@ -121,7 +123,7 @@
 		[System.Xml.Serialization.XmlElement("Reference", typeof(ProjectItemGroupReference))]
 		[System.Xml.Serialization.XmlElement("Service", typeof(ProjectItemGroupService))]
 		[System.Xml.Serialization.XmlElement("TypeScriptCompile", typeof(ProjectItemGroupTypeScriptCompile))]
-		public object[] Items
+		public List<object> Items
 		{
 			get
 			{
@@ -138,7 +140,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectItemGroupCompile
+	public class ProjectItemGroupCompile
 	{
 
 		private string dependentUponField;
@@ -177,7 +179,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectItemGroupContent
+	public class ProjectItemGroupContent
 	{
 
 		private string dependentUponField;
@@ -231,7 +233,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectItemGroupFolder
+	public class ProjectItemGroupFolder
 	{
 
 		private string includeField;
@@ -255,7 +257,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectItemGroupNone
+	public class ProjectItemGroupNone
 	{
 
 		private string subTypeField;
@@ -294,7 +296,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectItemGroupProjectReference
+	public class ProjectItemGroupProjectReference
 	{
 
 		private string projectField;
@@ -348,7 +350,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectItemGroupReference
+	public class ProjectItemGroupReference
 	{
 
 		private string privateField;
@@ -402,7 +404,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectItemGroupService
+	public class ProjectItemGroupService
 	{
 
 		private string includeField;
@@ -426,7 +428,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectItemGroupTypeScriptCompile
+	public class ProjectItemGroupTypeScriptCompile
 	{
 
 		private string includeField;
@@ -450,7 +452,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectProjectExtensions
+	public class ProjectProjectExtensions
 	{
 
 		private ProjectProjectExtensionsVisualStudio visualStudioField;
@@ -473,7 +475,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectProjectExtensionsVisualStudio
+	public class ProjectProjectExtensionsVisualStudio
 	{
 
 		private ProjectProjectExtensionsVisualStudioFlavorProperties flavorPropertiesField;
@@ -496,7 +498,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectProjectExtensionsVisualStudioFlavorProperties
+	public class ProjectProjectExtensionsVisualStudioFlavorProperties
 	{
 
 		private ProjectProjectExtensionsVisualStudioFlavorPropertiesWebProjectProperties webProjectPropertiesField;
@@ -535,7 +537,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectProjectExtensionsVisualStudioFlavorPropertiesWebProjectProperties
+	public class ProjectProjectExtensionsVisualStudioFlavorPropertiesWebProjectProperties
 	{
 
 		private string useIISField;
@@ -678,7 +680,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectPropertyGroup
+	public class ProjectPropertyGroup
 	{
 
 		private ProjectPropertyGroupVisualStudioVersion visualStudioVersionField;
@@ -1264,7 +1266,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectPropertyGroupVisualStudioVersion
+	public class ProjectPropertyGroupVisualStudioVersion
 	{
 
 		private string conditionField;
@@ -1304,7 +1306,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectPropertyGroupVSToolsPath
+	public class ProjectPropertyGroupVSToolsPath
 	{
 
 		private string conditionField;
@@ -1344,7 +1346,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectPropertyGroupConfiguration
+	public class ProjectPropertyGroupConfiguration
 	{
 
 		private string conditionField;
@@ -1384,7 +1386,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectPropertyGroupPlatform
+	public class ProjectPropertyGroupPlatform
 	{
 
 		private string conditionField;
@@ -1424,7 +1426,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectTarget
+	public class ProjectTarget
 	{
 
 		private ProjectTargetPropertyGroup propertyGroupField;
@@ -1542,7 +1544,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectTargetPropertyGroup
+	public class ProjectTargetPropertyGroup
 	{
 
 		private string errorTextField;
@@ -1565,7 +1567,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectTargetError
+	public class ProjectTargetError
 	{
 
 		private string conditionField;
@@ -1605,7 +1607,7 @@
 	[System.Serializable]
 	[System.ComponentModel.DesignerCategory("code")]
 	[System.Xml.Serialization.XmlType(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectTargetAspNetCompiler
+	public class ProjectTargetAspNetCompiler
 	{
 
 		private string virtualPathField;
