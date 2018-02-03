@@ -7,7 +7,10 @@ namespace Utilities
 	{
 		public static void WritrSuccess(this string that)
 		{
-
+			Console.ForegroundColor = ConsoleColor.DarkBlue;
+			Console.Write(that);
+			Console.ResetColor();
+			Console.WriteLine();
 		}
 
 		/// <summary>
