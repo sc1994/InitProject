@@ -27,6 +27,7 @@ namespace Entity
         Entity,
         Factory,
         Model,
-        Utilities
+        Utilities,
+		Web
     }
 }

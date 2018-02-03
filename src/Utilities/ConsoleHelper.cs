@@ -61,6 +61,7 @@ namespace Utilities
 		/// <param name="that"></param>
 		public static void WriteError(this string that)
 		{
+			Console.WriteLine();
 			Console.Write("ERROR: ");
 			Console.ForegroundColor = ConsoleColor.Red;
 			Console.Write(that);

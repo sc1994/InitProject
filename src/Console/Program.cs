@@ -8,8 +8,8 @@ namespace UserConsole
 	{
 		static void Main(string[] args)
 		{
-			RefSet.SetPackage(Init.Config.Web, PackageEnum.Autofac);
-
+			RefSet.SetPackage(ProjectEnum.Web, PackageEnum.Autofac);
+			RefSet.SetReference(ProjectEnum.Cache, ProjectEnum.Web);
 
 
 			Console.ReadLine();

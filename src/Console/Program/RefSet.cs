@@ -12,26 +12,27 @@ namespace UserConsole
 	public class RefSet
 	{
 		private static readonly Dictionary<PackageEnum, string> PackageDictionary = new Dictionary<PackageEnum, string>
-		{
-			{ PackageEnum.StackExchangeRedis ,"1.2.6"},
-			{ PackageEnum.Dapper,"1.50.4"},
-			{ PackageEnum.LogNet,"2.0.8"},
-			{ PackageEnum.TinyMapper,"2.0.8"},
-			{ PackageEnum.Autofac,"4.6.2"},
-			{ PackageEnum.AutofacMvc5,"4.0.2"}
-		};
+																					{
+																						{PackageEnum.StackExchangeRedis, "1.2.6"},
+																						{PackageEnum.Dapper, "1.50.4"},
+																						{PackageEnum.LogNet, "2.0.8"},
+																						{PackageEnum.TinyMapper, "2.0.8"},
+																						{PackageEnum.Autofac, "4.6.2"},
+																						{PackageEnum.AutofacMvc5, "4.0.2"}
+																					};
 
 		private static readonly Dictionary<ProjectEnum, string> ProjectDictionary = new Dictionary<ProjectEnum, string>
-		{
-			{ProjectEnum.Business, Init.Config.Business},
-			{ProjectEnum.Cache, Init.Config.Cache},
-			{ProjectEnum.Common, Init.Config.Common},
-			{ProjectEnum.Dal, Init.Config.Dal},
-			{ProjectEnum.Entity, Init.Config.Entity},
-			{ProjectEnum.Factory, Init.Config.Factory},
-			{ProjectEnum.Model, Init.Config.Model},
-			{ProjectEnum.Utilities, Init.Config.Utilities}
-		};
+																					{
+																						{ProjectEnum.Business, Init.Config.Business},
+																						{ProjectEnum.Cache, Init.Config.Cache},
+																						{ProjectEnum.Common, Init.Config.Common},
+																						{ProjectEnum.Dal, Init.Config.Dal},
+																						{ProjectEnum.Entity, Init.Config.Entity},
+																						{ProjectEnum.Factory, Init.Config.Factory},
+																						{ProjectEnum.Model, Init.Config.Model},
+																						{ProjectEnum.Utilities, Init.Config.Utilities},
+																						{ProjectEnum.Web, Init.Config.Web}
+																					};
 
 		/// <summary>
 		/// 给某个项目配置某种包
@@ -134,30 +135,39 @@ namespace UserConsole
 				() =>
 				{
 					var projectPath = Path.Combine(Init.Config.SolutionPath, toProject, $"{toProject}.csproj");
-					if (File.Exists(projectPath))
+					if (!File.Exists(projectPath))
 					{
 						Thread.Sleep(load * 950);
 						$"不存在文件\"{toProject}.csproj\"".WriteError();
 						"即将结束本程序".WriteWait(5);
 					}
 					var project = File.ReadAllText(projectPath).XmlToObject<Project>();
-					var exit = project.Items.Any(item =>
+					foreach (var item in project.Items)
 					{
-						if (item is ProjectItemGroupProjectReference reference)
+						if (item is ProjectItemGroup group)
 						{
-							return reference.Name == fromProject;
+							if (group.Items.Any(g => g is ProjectItemGroupProjectReference))
+							{
+								var exit = group.Items.Any(g =>
+													  {
+														  if (g is ProjectItemGroupProjectReference reference)
+														  {
+															  return reference.Name == fromProject;
+														  }
+														  return false;
+													  });
+								if (!exit)
+								{
+									group.Items.Add(new ProjectItemGroupProjectReference
+									{
+										Name = fromProject,
+										Include = $"..\\{fromProject}\\{fromProject}.csproj"
+									});
+									File.WriteAllText(projectPath, project.ToXml<Project>());
+									isSuccess = true;
+								}
+							}
 						}
-						return false;
-					});
-					if (!exit)
-					{
-						project.Items.Add(new ProjectItemGroupProjectReference
-						{
-							Name = fromProject,
-							Include = $"..\\{fromProject}\\{fromProject}.csproj"
-						});
-						File.WriteAllText(projectPath, project.ToXml<Project>());
-						isSuccess = true;
 					}
 				});
 			if (isSuccess)

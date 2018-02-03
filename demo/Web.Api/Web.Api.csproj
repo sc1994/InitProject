@@ -110,6 +110,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Web.Common\Web.Common.csproj">
+      <Project>{d9ec118d-8a7b-4df3-87d4-463f89bd5155}</Project>
+      <Name>Web.Common</Name>
+    </ProjectReference>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <ProjectReference Include="..\Web.Cache\Web.Cache.csproj">
+      <Name>Web.Cache</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
