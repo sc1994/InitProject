@@ -101,6 +101,7 @@ namespace UserConsole
 								});
 								File.WriteAllText(csprojPath, csproj.ToXml<Project>());
 								isSuccess = true;
+								break;
 							}
 						}
 					}
@@ -165,6 +166,7 @@ namespace UserConsole
 									});
 									File.WriteAllText(projectPath, project.ToXml<Project>());
 									isSuccess = true;
+									break;
 								}
 							}
 						}
