@@ -76,8 +76,7 @@ namespace UserConsole
 					if (!File.Exists(csprojPath))
 					{
 						Thread.Sleep(load * 950);
-						$"不存在文件\"{project}.csproj\"".WriteError();
-						"即将结束本程序".WriteWait(5);
+						$"不存在文件\"{project}.csproj\"".WriteError(false);
 					}
 					var csproj = File.ReadAllText(csprojPath).XmlToObject<Project>();
 					foreach (var item in csproj.Items)
@@ -139,8 +138,7 @@ namespace UserConsole
 					if (!File.Exists(projectPath))
 					{
 						Thread.Sleep(load * 950);
-						$"不存在文件\"{toProject}.csproj\"".WriteError();
-						"即将结束本程序".WriteWait(5);
+						$"不存在文件\"{toProject}.csproj\"".WriteError(false);
 					}
 					var project = File.ReadAllText(projectPath).XmlToObject<Project>();
 					foreach (var item in project.Items)

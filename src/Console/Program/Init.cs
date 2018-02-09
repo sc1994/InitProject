@@ -44,7 +44,6 @@ namespace UserConsole
                 Config.Common.IsNullOrEmpty())
             {
                 "请确保InifConfig.json 中的配置齐全".WriteError();
-                "此异常导致无法继续, 窗口即将关闭".WriteWait(7);
             }
         }
 
@@ -61,7 +60,6 @@ namespace UserConsole
             catch
             {
                 $"配置有误请检查配置文件: {Path.GetFullPath(path)}".WriteError();
-                "此异常导致无法继续, 窗口即将关闭".WriteWait(7);
             }
             return result;
         }

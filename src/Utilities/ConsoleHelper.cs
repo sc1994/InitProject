@@ -59,7 +59,8 @@ namespace Utilities
         /// 错误信息(强制按任意键才能继续)
         /// </summary>
         /// <param name="that"></param>
-        public static void WriteError(this string that)
+        /// <param name="close"></param>
+        public static void WriteError(this string that, bool close = true)
         {
             Console.WriteLine();
             Console.Write("ERROR: ");
@@ -69,6 +70,10 @@ namespace Utilities
             Console.Write(" 请按任意键继续...");
             Console.WriteLine();
             Console.ReadKey();
+            if (close)
+            {
+                "此异常导致无法继续, 窗口即将关闭".WriteWait(7);
+            }
         }
 
         /// <summary>
